@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | Sithole's Car Repair Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Sithole's Car Repair Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Make an Enquiry</h2>
+        <p>Fill in the form below and we'll get back to you about your vehicle repair.</p>
+
+        <!-- Enquiry form: action/method will be wired up once JS/backend is added in a later part -->
+        <form action="#" method="post">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="vehicle">Vehicle Make and Model</label>
+            <input type="text" id="vehicle" name="vehicle">
+
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+                <option value="panel-beating">Panel Beating</option>
+                <option value="engine-repair">Engine Repairs</option>
+                <option value="servicing">General Servicing</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit">Send Enquiry</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sithole's Car Repair Shop. All rights reserved.</p>
+        <p>Umlazi, Durban | Phone: 063 412 8225 | WhatsApp: 063 412 8225</p>
+    </footer>
+
+</body>
+</html>
