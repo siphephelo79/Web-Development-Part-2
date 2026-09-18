@@ -53,10 +53,22 @@ Home (index.html)
 ├── Enquiry (enquiry.html)
 └── Contact (contact.html)
 
+## Screenshot Evidence (Responsive Testing)
+<img width="1200" height="800" alt="home desktop" src="https://github.com/user-attachments/assets/59d1e248-7fed-4edb-ab98-a89c15f0a51f" />
+<img width="375" height="800" alt="home-mobile" src="https://github.com/user-attachments/assets/211836ba-8782-4499-a575-b5f747dbd77f" />
+<img width="768" height="800" alt="home-tablet" src="https://github.com/user-attachments/assets/3a7fa77a-8d7f-4cac-b47c-0067b737ac08" />
+<img width="1200" height="800" alt="contact-desktop" src="https://github.com/user-attachments/assets/4b59b8e4-5d1b-4fbd-bc88-84ceb8a5a942" />
+<img width="375" height="800" alt="contact-mobile" src="https://github.com/user-attachments/assets/7449ddcf-b111-4a82-b2db-2124a06af675" />
+<img width="768" height="800" alt="contact-tablet" src="https://github.com/user-attachments/assets/29c1d1f1-4fd3-44b2-bc68-170373272dd6" />
 
 ## Changelog
 - **13 August 2026:** Project initiated — proposal drafted (organisation overview, goals, design/UX, technical requirements, budget).
 - **14 August 2026:** Created HTML structure for all five pages (index, about, services, enquiry, contact) with semantic tags and navigation.
+- **18 September 2026:** Created external stylesheet `style.css` and linked it to all five HTML pages.
+- **18 September 2026:** Applied base styles, typography, colour scheme, and layout (Flexbox/Grid) across all pages.
+- **18 September 2026:** Added responsive breakpoints for tablet (768px) and mobile (480px) screen sizes.
+- **18 September 2026:** Tested website across desktop, tablet, and mobile screen sizes; added screenshot evidence to README.
+
 
 ## References
 Cöster, M., Iveroth, E., Bengtsson, F. and Aleryd, N. (2023) *Digital Transformation: A Business Perspective*. Lund: Studentlitteratur.
@@ -70,3 +82,4 @@ Myers, M. (2023) *CompTIA A+ Core 1 and Core 2 All-in-One Exam Guide*. 6th edn. 
 Stair, R.M. and Reynolds, G.W. (2018) *Principles of Information Systems*. 13th edn. Boston: Cengage Learning.
 
 Truehost (2026) *Best Domain Registration in South Africa (2026): Prices, Providers & What Nobody Tells You*. Available at: https://truehost.co.za/best-domain-registration-in-south-africa/ (Accessed: 13 August 2026).
+
