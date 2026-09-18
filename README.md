@@ -48,8 +48,10 @@ Part 1 covers the project proposal (organisation overview, goals, design/UX, tec
 ## Sitemap
 
 ├── CSS
+|   └── Style.css
 ├── Git
-├── Images
+├── Images/
+|   └── Screenshot 2026-08-14 163050.png
 ├── Home.html
 ├── about.html
 ├── contact.html
