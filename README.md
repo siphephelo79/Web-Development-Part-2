@@ -47,11 +47,15 @@ Part 1 covers the project proposal (organisation overview, goals, design/UX, tec
 
 ## Sitemap
 
-Home (index.html)
-├── About Us (about.html)
-├── Services (services.html)
-├── Enquiry (enquiry.html)
-└── Contact (contact.html)
+├── CSS
+├── Git
+├── Images
+├── Home.html
+├── about.html
+├── contact.html
+├── services.html
+├── enquiry.html
+└── README.md
 
 ## Part 2 Details
 Part 2 focused on CSS styling and responsive design:
