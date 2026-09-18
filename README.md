@@ -54,6 +54,15 @@ Home (index.html)
 └── Contact (contact.html)
 
 ## Part 2 Details
+Part 2 focused on CSS styling and responsive design:
+- Created a single external stylesheet, `style.css`, linked to all five HTML pages
+- Applied a base style/reset and set default typography, colours, and spacing
+- Styled the header, navigation, and footer consistently across all pages
+- Styled page-specific sections: hero and services preview (Home), history/mission-vision/team (About), service cards (Services), form styling shared across Enquiry and Contact, plus map and contact details (Contact)
+- Applied a flexbox/grid layout for the services grid and team member cards
+- Added responsive breakpoints at 768px (tablet) and 480px (mobile), switching multi-column layouts to single-column on smaller screens
+- Tested the site across desktop, tablet, and mobile screen sizes using browser developer tools (screenshots included below)
+
 
 ## Screenshot Evidence (Responsive Testing)
 <img width="1200" height="800" alt="home desktop" src="https://github.com/user-attachments/assets/59d1e248-7fed-4edb-ab98-a89c15f0a51f" />
