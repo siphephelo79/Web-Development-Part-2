@@ -53,7 +53,7 @@ Home (index.html)
 ├── Enquiry (enquiry.html)
 └── Contact (contact.html)
 
-Part 2 Details
+## Part 2 Details
 
 ## Screenshot Evidence (Responsive Testing)
 <img width="1200" height="800" alt="home desktop" src="https://github.com/user-attachments/assets/59d1e248-7fed-4edb-ab98-a89c15f0a51f" />
