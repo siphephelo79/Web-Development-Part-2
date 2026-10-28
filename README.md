@@ -57,6 +57,9 @@ Home (index.html)
 ## Changelog
 - **13 August 2026:** Project initiated — proposal drafted (organisation overview, goals, design/UX, technical requirements, budget).
 - **14 August 2026:** Created HTML structure for all five pages (index, about, services, enquiry, contact) with semantic tags and navigation.
+- **15 September 2026:**Edit force commit and removed previous project
+- **15 September 2026:**Edit Readme 
+- **16 September 2026:**Remove css files and add style.css also edit ReadMe
 
 ## References
 Cöster, M., Iveroth, E., Bengtsson, F. and Aleryd, N. (2023) *Digital Transformation: A Business Perspective*. Lund: Studentlitteratur.
