@@ -271,3 +271,28 @@ footer p {
         display: flex;
     }
 }
+
+/* Search, filter and sort controls */
+.services-controls {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.services-controls input {
+    flex: 1 1 250px;
+}
+
+.service-category {
+    font-size: 14px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.no-results {
+    padding: 16px;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+}

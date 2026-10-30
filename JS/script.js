@@ -146,3 +146,79 @@ document.addEventListener("DOMContentLoaded", function () {
             navMenu.classList.toggle("nav-open");
         });
     }
+
+        // =========================================
+    // DYNAMIC SERVICES + SEARCH/FILTER (services.html only)
+    // =========================================
+    const servicesList = document.getElementById("services-list");
+
+    if (servicesList) {
+
+        // The services data. Add or edit items here and the page updates itself.
+        const services = [
+            { name: "Panel Beating", description: "Repairing dents, bent panels, and bodywork damage from accidents or general wear.", category: "Bodywork" },
+            { name: "Accident Damage Repair", description: "Restoring badly wrecked vehicles after serious collisions.", category: "Bodywork" },
+            { name: "Engine Repairs", description: "Diagnosing and fixing engine problems to keep your vehicle reliable and roadworthy.", category: "Mechanical" },
+            { name: "Brake Repairs", description: "Checking and replacing worn brake pads, discs and brake fluid.", category: "Mechanical" },
+            { name: "General Servicing", description: "Routine maintenance including oil changes, brake checks, and overall vehicle inspections.", category: "Maintenance" }
+        ];
+
+        const searchBox = document.getElementById("service-search");
+        const categorySelect = document.getElementById("service-category");
+        const sortSelect = document.getElementById("service-sort");
+
+        // This function filters, sorts and then draws the services on the page
+        function showServices() {
+            const searchText = searchBox.value.toLowerCase().trim();
+            const category = categorySelect.value;
+            const sortOption = sortSelect.value;
+
+            // 1. Filter by search text and category
+            const results = services.filter(function (service) {
+                const matchesSearch =
+                    service.name.toLowerCase().includes(searchText) ||
+                    service.description.toLowerCase().includes(searchText);
+                const matchesCategory = (category === "all" || service.category === category);
+                return matchesSearch && matchesCategory;
+            });
+
+            // 2. Sort the results
+            if (sortOption === "az") {
+                results.sort(function (a, b) {
+                    return a.name.localeCompare(b.name);
+                });
+            } else if (sortOption === "za") {
+                results.sort(function (a, b) {
+                    return b.name.localeCompare(a.name);
+                });
+            }
+
+            // 3. Clear the old list
+            servicesList.innerHTML = "";
+
+            // 4. Show a message if nothing matched
+            if (results.length === 0) {
+                servicesList.innerHTML = "<p class='no-results'>No services found. Try a different search.</p>";
+                return;
+            }
+
+            // 5. Create a card for each service
+            results.forEach(function (service) {
+                const card = document.createElement("article");
+                card.className = "service";
+                card.innerHTML =
+                    "<h3>" + service.name + "</h3>" +
+                    "<p>" + service.description + "</p>" +
+                    "<p class='service-category'>Category: " + service.category + "</p>";
+                servicesList.appendChild(card);
+            });
+        }
+
+        // Update the list whenever the user types or changes a dropdown
+        searchBox.addEventListener("input", showServices);
+        categorySelect.addEventListener("change", showServices);
+        sortSelect.addEventListener("change", showServices);
+
+        // Show all services when the page first loads
+        showServices();
+    }

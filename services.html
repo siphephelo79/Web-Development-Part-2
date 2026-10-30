@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Sithole's Car Repair Shop</title>
+    <title>Our Services | Sithole's Car Repair Shop</title>
+<meta name="description" content="Panel beating, engine repairs and general servicing in Umlazi. Experienced in fixing badly damaged vehicles.">
+<meta name="keywords" content="panel beating Umlazi, engine repair Umlazi, car service Durban, accident repair Umlazi">
+<meta name="author" content="Sithole's Car Repair Shop">
     <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
         <button id="nav-toggle" aria-label="Toggle navigation menu">☰</button>
         <nav>
             <ul>
-                <li><a href="Home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
@@ -29,21 +32,27 @@
         <h2>Our Services</h2>
         <p>We offer a full range of car repair services, with particular experience in fixing badly wrecked vehicles.</p>
 
-        <!-- Each service listed as its own article -->
-        <article class="service">
-            <h3>Panel Beating</h3>
-            <p>Repairing dents, bent panels, and bodywork damage from accidents or general wear.</p>
-        </article>
+        <!-- Search, filter and sort controls -->
+<div class="services-controls">
+    <input type="text" id="service-search" placeholder="Search services...">
 
-        <article class="service">
-            <h3>Engine Repairs</h3>
-            <p>Diagnosing and fixing engine problems to keep your vehicle reliable and roadworthy.</p>
-        </article>
+    <select id="service-category">
+        <option value="all">All categories</option>
+        <option value="Bodywork">Bodywork</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Maintenance">Maintenance</option>
+    </select>
 
-        <article class="service">
-            <h3>General Servicing</h3>
-            <p>Routine maintenance including oil changes, brake checks, and overall vehicle inspections.</p>
-        </article>
+    <select id="service-sort">
+        <option value="default">Sort: Default</option>
+        <option value="az">Name: A to Z</option>
+        <option value="za">Name: Z to A</option>
+    </select>
+</div>
+
+<!-- JavaScript will fill this with the services -->
+<div id="services-list"></div>
+        
 
         <!-- Link to enquiry page for pricing/quote requests -->
         <p>Contact us for a quote on any of the above services.</p>
