@@ -63,10 +63,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 responseMessage = "Thanks " + name + "! We've received your enquiry and will get back to you shortly with more details.";
             }
 
-            responseBox.innerHTML = "<p>" + responseMessage + "</p>";
-            responseBox.className = "form-message success";
-            form.reset();
-        });
+                        // AJAX: send the enquiry in the background without reloading the page
+            responseBox.innerHTML = "<p>Sending your enquiry...</p>";
+            responseBox.className = "form-message";
+
+            const enquiryData = { name: name, email: email, phone: phone, service: service };
+
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(enquiryData)
+            })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Request failed");
+                }
+                return response.json();
+            })
+            .then(function () {
+                responseBox.innerHTML = "<p>" + responseMessage + "</p>";
+                responseBox.className = "form-message success";
+                form.reset();
+            })
+            .catch(function () {
+                responseBox.innerHTML = "<p>Sorry, something went wrong. Please try again or contact us on WhatsApp.</p>";
+                responseBox.className = "form-message error";
+            });
+        
     }
 
     // =========================================
@@ -221,4 +244,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Show all services when the page first loads
         showServices();
+    }
+
+        // =========================================
+    // SCROLL ANIMATIONS (all pages)
+    // =========================================
+    const animatedItems = document.querySelectorAll(
+        ".hero, .intro, .services-preview, .history, .mission-vision, .team, .contact-details, .map, .gallery, form"
+    );
+
+    animatedItems.forEach(function (item) {
+        item.classList.add("fade-in");
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    animatedItems.forEach(function (item) {
+        observer.observe(item);
+    });
+
+        // =========================================
+    // GALLERY LIGHTBOX (index.html only)
+    // =========================================
+    const galleryImages = document.querySelectorAll(".gallery-grid img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxClose = document.getElementById("lightbox-close");
+
+    if (lightbox && galleryImages.length > 0) {
+        galleryImages.forEach(function (img) {
+            img.addEventListener("click", function () {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add("open");
+            });
+        });
+
+        lightboxClose.addEventListener("click", function () {
+            lightbox.classList.remove("open");
+        });
+
+        // Clicking the dark background also closes it
+        lightbox.addEventListener("click", function (event) {
+            if (event.target === lightbox) {
+                lightbox.classList.remove("open");
+            }
+        });
+
+        // Pressing Escape closes it
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                lightbox.classList.remove("open");
+            }
+        });
     }

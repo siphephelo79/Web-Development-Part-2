@@ -296,3 +296,25 @@ footer p {
     background-color: var(--light-grey);
     border-radius: 8px;
 }
+
+/* Fade-in on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover transitions on cards */
+.service, .team-member, .services-preview li {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover, .team-member:hover, .services-preview li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
