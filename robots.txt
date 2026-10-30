@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://glittery-jalebi-07b409.netlify.app/sitemap.xml
+Sitemap: https://sitholes-car-repair-umlazi.netlify.app/sitemap.xml
